@@ -3,7 +3,7 @@
 I'm a researcher, entrepreneur, and engineer passionate about achieving impact with AI. Here on GitHub, I build AI systems with Python and, for fun, products to solve real-world needs.
 
 ## 🚀 Entrepreneurial Journey
-I founded [xtream](https://xtreamers.io) and [Reaidy](https://reaidy.ai), both of which were acquired by **TeamSystem** in September 2025. I love building things that solve relevant problems.
+I founded [xtream](https://xtreamers.io) and [Reaidy](https://reaidy.ai), both of which were acquired by [TeamSystem](https://teamsystem.com) in September 2025. I love building things that solve relevant problems.
 
 ## 🎓 Academic Background
 I've had the privilege of teaching and lecturing at several prestigious institutions:
@@ -29,7 +29,7 @@ I love sharing knowledge! Here are some of my sessions delivered at various conf
 - [Usare l'AI per prevedere il futuro](https://www.youtube.com/live/EVsOkX6SyBk?si=nAQbCxGMxwReagBo)
 
 ## 🎙️ Podcast
-With Luca, I started the [**AI Compass** podcast](https://www.youtube.com/playlist?list=PLJrWo7UCQBWgnQYVWEH8t6-g3fhmvRmF5) during my time at xtream.
+With Luca, I started the [AI Compass podcast](https://www.youtube.com/playlist?list=PLJrWo7UCQBWgnQYVWEH8t6-g3fhmvRmF5) during my time at xtream.
 
 ## 🦫 Why the Beaver?
 I love beavers because they are ugly, definitely not elegant, but smart and hard-working. They transform the environment they live in, creating a [positive impact](https://www.fws.gov/story/beavers-work-improve-habitat).
