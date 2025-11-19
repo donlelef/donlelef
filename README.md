@@ -35,9 +35,9 @@ With Luca, I started the [**AI Compass** podcast](https://www.youtube.com/playli
 I love beavers because they are ugly, definitely not elegant, but smart and hard-working. They transform the environment they live in, creating a [positive impact](https://www.fws.gov/story/beavers-work-improve-habitat).
 
 ## 🔎 More about me
-- **LinkedIn**: [Emanuele Fabbiani](https://www.linkedin.com/in/emanuelefabbiani/)
-- **Google Scholar**: [Profile](https://scholar.google.com/citations?user=aK8MDJIAAAAJ)
-- **Sessionize**: [Emanuele Fabbiani](https://sessionize.com/emanuele-fabbiani/)
+- [LinkedIn](https://www.linkedin.com/in/emanuelefabbiani/)
+- [Google Scholar](https://scholar.google.com/citations?user=aK8MDJIAAAAJ)
+- [Sessionize](https://sessionize.com/emanuele-fabbiani/)
 
 ---
 *Thanks for dropping by!*
