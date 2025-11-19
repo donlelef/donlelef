@@ -6,7 +6,9 @@ I'm a researcher, entrepreneur, and engineer passionate about achieving impact w
 I founded [xtream](https://xtreamers.io) and [Reaidy](https://reaidy.ai), both of which were acquired by [TeamSystem](https://teamsystem.com) in September 2025. I love building things that solve relevant problems.
 
 ## 🎓 Academic Background
-I've had the privilege of teaching and lecturing at several prestigious institutions:
+During the PhD between the University of Pavia and EPFL, I fell in love with AI and Machine Learning. 
+
+I've had the privilege of lecturing at several prestigious institutions:
 - **Professor** for the **Practical AI** class at the Catholic University of Milan
 - **Guest Lecturer** at the University of Pavia, Politechnic of Milan, Politechnic of Wroclaw, EPFL, and HSLU
 
@@ -32,7 +34,9 @@ I love sharing knowledge! Here are some of my sessions delivered at various conf
 With Luca, I started the [AI Compass podcast](https://www.youtube.com/playlist?list=PLJrWo7UCQBWgnQYVWEH8t6-g3fhmvRmF5) during my time at xtream.
 
 ## 🦫 Why the Beaver?
-I love beavers because they are ugly, definitely not elegant, but smart and hard-working. They transform the environment they live in, creating a [positive impact](https://www.fws.gov/story/beavers-work-improve-habitat).
+I love beavers because they are ugly, definitely not elegant, but smart and hard-working. 
+
+They transform the environment they live in, creating a [positive impact](https://www.fws.gov/story/beavers-work-improve-habitat).
 
 ## 🔎 More about me
 - [LinkedIn](https://www.linkedin.com/in/emanuelefabbiani/)
