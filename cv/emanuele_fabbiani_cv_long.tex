@@ -12,30 +12,37 @@
 \usepackage{array}
 \usepackage{tabularx}
 
-\definecolor{accent}{HTML}{1F4E5F}
-\definecolor{textgray}{HTML}{555555}
+\definecolor{accent}{HTML}{1AEAC8}
+\definecolor{textgray}{HTML}{4B5563}
+\definecolor{softaccent}{HTML}{E8FFFB}
 
 \pagestyle{empty}
+\renewcommand{\baselinestretch}{0.98}
+\setlength{\tabcolsep}{4pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlist[itemize]{leftmargin=1.2em, topsep=1pt, itemsep=1pt, parsep=0pt}
-\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[{\color{accent}\titlerule[1.1pt]}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 \newcommand{\role}[4]{%
-  \textbf{#1} \hfill {\small #2}\\
-  {\small\color{textgray}#3 \hfill #4}\par
+  \textbf{#1} \hfill #2\\
+  {\color{textgray}#3 \hfill #4}\par
 }
 \newcommand{\project}[2]{%
   \textbf{#1}\\[-1pt]
-  {\small\color{textgray}#2}\par
+  {\color{textgray}#2}\par
 }
+\newcommand{\metric}[1]{\colorbox{softaccent}{\strut\textbf{#1}}}
 
 \begin{document}
 
 {\LARGE\bfseries Emanuele Fabbiani}\\[2pt]
-{\large Researcher, Entrepreneur, Engineer}\\[4pt]
+{\large Researcher, Entrepreneur, Engineer}\\[5pt]
 \href{mailto:emanuele.fabbiani@gmail.com}{emanuele.fabbiani@gmail.com} \quad
-\href{https://www.linkedin.com/in/emanuelefabbiani}{linkedin.com/in/emanuelefabbiani}
+\href{https://www.linkedin.com/in/emanuelefabbiani}{https://www.linkedin.com/in/emanuelefabbiani}
+
+\vspace{5pt}
+{\color{accent}\rule{\textwidth}{2pt}}
 
 \section*{Skills}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm}X}
@@ -49,7 +56,7 @@ Entrepreneurship, public speaking, project management up to EUR 3M, group manage
 
 \section*{Experience}
 \role{Co-founder, CEO, and Head of AI}{2018--current}{xtream}{Milan, Italy}
-xtream was a consulting company building digital products and AI solutions for scaleups and corporates. Bootstrapped the company with four partners and grew it to over EUR 2M in annual revenue and EUR 500K in profits within 7 years. Built and led a 9-person AI team, recruiting 3 PhDs and 2 university professors across Italy and Argentina. Launched the GenAI Adoption business line, generating EUR 250K in additional revenue in 15 months with a 60\% profit margin. Appointed CEO in 2023, driving a doubling of revenues within two years. In 2025, xtream was acquired by TeamSystem, a company with EUR 1.1B in revenues backed by CapitalG and the Abu Dhabi Investment Authority.
+xtream was a consulting company building digital products and AI solutions for scaleups and corporates. Bootstrapped the company with four partners and grew it to over \metric{EUR 2M} in annual revenue and \metric{EUR 500K} in profits within 7 years. Built and led a \metric{9-person AI team}, recruiting 3 PhDs and 2 university professors across Italy and Argentina. Launched the GenAI Adoption business line, generating \metric{EUR 250K} in additional revenue in 15 months with a \metric{60\% profit margin}. Appointed CEO in 2023, driving a doubling of revenues within two years. In 2025, xtream was acquired by TeamSystem, a company with EUR 1.1B in revenues backed by CapitalG and the Abu Dhabi Investment Authority.
 
 \vspace{3pt}
 \project{Financial index forecasting}{Machine learning, time series forecasting, Python, scikit-learn, XGBoost, Azure, Databricks}
@@ -57,15 +64,15 @@ Led a team of 5 data scientists in the design and implementation of models to fo
 
 \vspace{3pt}
 \project{Power load forecasting}{Machine learning, time series forecasting, Python, scikit-learn, project management}
-Led a team of 4 data scientists and data engineers from presales to deployment. Achieved an average Mean Absolute Percentage Error (MAPE) 25\% lower than the previous production system, delivered result-sharing presentations to top management, and was asked to enable use of the new models before deployment.
+Led a team of 4 data scientists and data engineers from presales to deployment. Achieved an average Mean Absolute Percentage Error (MAPE) \metric{25\% lower} than the previous production system, delivered result-sharing presentations to top management, and was asked to enable use of the new models before deployment.
 
 \vspace{3pt}
 \project{AskHR}{GenAI, RAG, LangChain, OpenAI, Python, Qdrant}
-Led a team of four engineers from presales through deployment to develop a Retrieval-Augmented Generation system that answers employee questions on HR policies. Built in close collaboration with the HR team of Europe's largest paytech company, the solution is now used by all Italian employees and reduced HR ticket volume by 30\% within the first two months.
+Led a team of four engineers from presales through deployment to develop a Retrieval-Augmented Generation system that answers employee questions on HR policies. Built in close collaboration with the HR team of Europe's largest paytech company, the solution is now used by all Italian employees and reduced HR ticket volume by \metric{30\%} within the first two months.
 
 \vspace{5pt}
 \role{Co-founder, CEO}{2024--2025}{Reaidy}{Milan, Italy}
-Co-founded and led the early development of Reaidy, an enterprise copywriting platform. Led pretotyping, prototyping, and delivery of initial product demos; secured the first clients; and generated EUR 230K in revenue in the first year. Reaidy was acquired by TeamSystem in 2025.
+Co-founded and led the early development of Reaidy, an enterprise copywriting platform. Led pretotyping, prototyping, and delivery of initial product demos; secured the first clients; and generated \metric{EUR 230K} in revenue in the first year. Reaidy was acquired by TeamSystem in 2025.
 
 \vspace{5pt}
 \role{Data Scientist}{2015--2017}{Techedge}{Milan, Italy and Madrid, Spain}
