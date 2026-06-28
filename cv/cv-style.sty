@@ -1,10 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cv-style}[2026/06/28 One-column CV style]
+\ProvidesPackage{cv-style}[2026/06/28 Modern one-column CV style]
 
-\RequirePackage{cmap}
-\RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[scaled=0.96]{helvet}
+\RequirePackage{iftex}
+\ifPDFTeX
+  \RequirePackage{cmap}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[utf8]{inputenc}
+\fi
+\RequirePackage[scaled=0.95]{helvet}
 \RequirePackage[a4paper,left=1.25cm,top=1cm,right=1.25cm,bottom=1.15cm,footskip=.4cm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
@@ -12,17 +15,34 @@
 \RequirePackage{needspace}
 \RequirePackage{ifthen}
 \RequirePackage{etoolbox}
-\RequirePackage{microtype}
+\RequirePackage{tabularx}
+\RequirePackage{array}
 
-\definecolor{cvaccent}{HTML}{1AEAC8}
-\definecolor{cvtext}{HTML}{222222}
-\definecolor{cvmuted}{HTML}{555555}
-\definecolor{cvlight}{HTML}{777777}
+\definecolor{cvaccent}{HTML}{0F766E}
+\definecolor{cvtext}{HTML}{202124}
+\definecolor{cvmuted}{HTML}{5F6368}
+\definecolor{cvlight}{HTML}{DADCE0}
+
+\newif\ifcvcompact
+\newcommand{\compactcv}{%
+  \cvcompacttrue
+  \setlength{\parskip}{1.5pt}
+  \setlist[itemize]{
+    leftmargin=1.05em,
+    itemsep=0pt,
+    topsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt
+  }%
+}
 
 \renewcommand{\familydefault}{\sfdefault}
-\ifdefined\pdfgentounicode
-  \InputIfFileExists{glyphtounicode.tex}{\pdfgentounicode=1}{}
+\ifPDFTeX
+  \ifdefined\pdfgentounicode
+    \InputIfFileExists{glyphtounicode.tex}{\pdfgentounicode=1}{}
+  \fi
 \fi
+\urlstyle{same}
 
 \hypersetup{
   colorlinks=true,
@@ -32,18 +52,19 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{3.5pt}
+\setlength{\parskip}{2.5pt}
 \setlength{\emergencystretch}{2em}
 \color{cvtext}
+\AtBeginDocument{\raggedright}
 
 \setlist[itemize]{
-  leftmargin=1.25em,
-  itemsep=2pt,
-  topsep=2pt,
+  leftmargin=1.1em,
+  itemsep=1.5pt,
+  topsep=1.5pt,
   parsep=0pt,
   partopsep=0pt
 }
-\renewcommand{\labelitemi}{\textcolor{cvaccent}{\small\textbullet}}
+\renewcommand{\labelitemi}{\textcolor{cvaccent}{\scriptsize\textbullet}}
 
 \newcommand{\cvfirstname}{}
 \newcommand{\cvlastname}{}
@@ -55,55 +76,76 @@
 \newcommand{\position}[1]{\renewcommand{\cvposition}{#1}}
 \newcommand{\email}[1]{\renewcommand{\cvemail}{#1}}
 \newcommand{\extrainfo}[1]{\renewcommand{\cvextra}{#1}}
+\newcommand{\cvsep}{\textcolor{cvlight}{\enspace\textbar\enspace}}
+\newcommand{\positionsep}{\textcolor{cvaccent}{\enspace\textbullet\enspace}}
 
 \newcommand{\makecvheader}[1][]{%
-  {\centering
-    {\fontsize{24pt}{28pt}\selectfont\bfseries \cvfirstname\ \cvlastname}\par
-    \vspace{2pt}
-    {\large\color{cvmuted}\cvposition}\par
-    \vspace{4pt}
-    {\small \href{mailto:\cvemail}{\cvemail}\quad{\color{cvaccent}\textbar}\quad\cvextra}\par
+  {\raggedright
+    \ifcvcompact
+      {\fontsize{22pt}{25pt}\selectfont\bfseries \cvfirstname\ \cvlastname}\par
+      {\small\color{cvmuted}\cvposition}\par
+      \vspace{3pt}
+      {\scriptsize \href{mailto:\cvemail}{\cvemail}\cvsep\cvextra}\par
+    \else
+      {\fontsize{25pt}{29pt}\selectfont\bfseries \cvfirstname\ \cvlastname}\par
+      \vspace{1pt}
+      {\normalsize\color{cvmuted}\cvposition}\par
+      \vspace{5pt}
+      {\footnotesize \href{mailto:\cvemail}{\cvemail}\cvsep\cvextra}\par
+    \fi
   }
-  \vspace{7pt}
+  \ifcvcompact\vspace{5pt}\else\vspace{8pt}\fi
+  {\color{cvaccent}\rule{2.4cm}{0.9pt}}%
+  {\color{cvlight}\rule{\dimexpr\linewidth-2.4cm\relax}{0.45pt}}\par
+  \ifcvcompact\vspace{1pt}\else\vspace{3pt}\fi
 }
 
 \newcommand{\cvsection}[1]{%
-  \Needspace{4\baselineskip}
-  \vspace{7pt}
-  {\large\bfseries\textcolor{cvaccent}{#1}}\par
-  \vspace{-2pt}
-  {\color{cvaccent}\rule{\linewidth}{0.55pt}}\par
+  \ifcvcompact\Needspace{3\baselineskip}\else\Needspace{4\baselineskip}\fi
+  \ifcvcompact\vspace{5pt}\else\vspace{8pt}\fi
+  {\normalsize\bfseries\MakeUppercase{#1}}\par
   \vspace{1pt}
+  {\color{cvlight}\rule{\linewidth}{0.45pt}}\par
+  \ifcvcompact\vspace{0pt}\else\vspace{2pt}\fi
 }
 
-\newenvironment{cvparagraph}{\begingroup}{\par\endgroup}
+\newenvironment{cvparagraph}{\begingroup\color{cvtext}\ifcvcompact\footnotesize\else\small\fi}{\par\endgroup}
 \newenvironment{cventries}{}{}
 \newenvironment{cvskills}{}{}
 \newenvironment{cvitems}{\begin{itemize}}{\end{itemize}}
 
 \newcommand{\metric}[1]{%
-  \textbf{\textcolor{cvaccent}{#1}}%
+  \textbf{#1}%
 }
 
-\newcommand{\resource}[2]{\textbf{#1}: \url{#2}}
+\newcommand{\resource}[2]{\textbf{#1}\cvsep\href{#2}{\nolinkurl{#2}}}
 
 \newcommand{\cvskill}[2]{%
   \Needspace{2\baselineskip}
-  \par\textbf{\textcolor{cvaccent}{#1}}\quad #2\par
+  \ifcvcompact
+    \noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{2.75cm}@{}>{\raggedright\arraybackslash}X@{}}
+      #1 & {\footnotesize #2}
+    \end{tabularx}\par
+  \else
+    \noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.15cm}@{}>{\raggedright\arraybackslash}X@{}}
+      #1 & {\small #2}
+    \end{tabularx}\par
+    \vspace{1pt}
+  \fi
 }
 
 \newcommand{\cventry}[5]{%
-  \Needspace{4\baselineskip}
-  \vspace{4pt}
-  {\bfseries #2%
+  \ifcvcompact\Needspace{3\baselineskip}\else\Needspace{4\baselineskip}\fi
+  \ifcvcompact\vspace{1.4pt}\else\vspace{3.5pt}\fi
+  {\ifcvcompact\small\else\normalsize\fi\bfseries #2%
     \ifblank{#4}{}{\hfill{\normalfont\small\color{cvmuted}#4}}%
   }\par
   \ifboolexpr{test {\ifblank{#1}} and test {\ifblank{#3}}}
     {}
-    {{\small
-      \ifblank{#1}{}{\textcolor{cvaccent}{\textbf{#1}}}%
-      \ifboolexpr{not test {\ifblank{#1}} and not test {\ifblank{#3}}}{\quad{\color{cvlight}\textbar}\quad}{}%
+    {{\footnotesize\color{cvmuted}
+      \ifblank{#1}{}{\textbf{#1}}%
+      \ifboolexpr{not test {\ifblank{#1}} and not test {\ifblank{#3}}}{\cvsep}{}%
       \ifblank{#3}{}{\color{cvmuted}#3}%
     }\par}%
-  \ifblank{#5}{}{\vspace{1pt}#5\par}%
+  \ifblank{#5}{}{\vspace{1pt}{\ifcvcompact\footnotesize\else\small\fi #5}\par}%
 }
