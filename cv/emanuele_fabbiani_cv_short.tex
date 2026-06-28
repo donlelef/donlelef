@@ -1,6 +1,6 @@
-\documentclass[9pt,a4paper]{extarticle}
+\documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=1cm]{geometry}
+\usepackage[margin=1.15cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -12,28 +12,33 @@
 \usepackage{array}
 \usepackage{tabularx}
 
-\definecolor{accent}{HTML}{1F4E5F}
-\definecolor{textgray}{HTML}{555555}
+\definecolor{accent}{HTML}{1AEAC8}
+\definecolor{textgray}{HTML}{4B5563}
+\definecolor{softaccent}{HTML}{E8FFFB}
 
 \pagestyle{empty}
-\renewcommand{\baselinestretch}{0.96}
+\renewcommand{\baselinestretch}{0.94}
 \setlength{\tabcolsep}{3pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlist[itemize]{leftmargin=1.05em, topsep=0pt, itemsep=0pt, parsep=0pt}
-\titleformat{\section}{\normalsize\bfseries\color{accent}}{}{0pt}{}[\titlerule]
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[{\color{accent}\titlerule[1pt]}]
 \titlespacing*{\section}{0pt}{5pt}{2pt}
 \newcommand{\entry}[4]{%
-  \textbf{#1} \hfill {\small #2}\\
-  {\small\color{textgray}#3 \hfill #4}\par
+  \textbf{#1} \hfill #2\\
+  {\color{textgray}#3 \hfill #4}\par
 }
+\newcommand{\metric}[1]{\colorbox{softaccent}{\strut\textbf{#1}}}
 
 \begin{document}
 
 {\LARGE\bfseries Emanuele Fabbiani}\\[1pt]
 {\normalsize Researcher, Entrepreneur, Engineer}\\[3pt]
 \href{mailto:emanuele.fabbiani@gmail.com}{emanuele.fabbiani@gmail.com} \quad
-\href{https://www.linkedin.com/in/emanuelefabbiani}{linkedin.com/in/emanuelefabbiani}
+\href{https://www.linkedin.com/in/emanuelefabbiani}{https://www.linkedin.com/in/emanuelefabbiani}
+
+\vspace{3pt}
+{\color{accent}\rule{\textwidth}{2pt}}
 
 \section*{Profile}
 Entrepreneur, AI engineer, and applied machine learning researcher. Co-founded and led AI/product companies acquired by TeamSystem in 2025. Built and managed technical teams, delivered production ML and GenAI systems for enterprise clients, and teach Practical AI at the Catholic University of Milan.
@@ -48,16 +53,16 @@ Leadership & Entrepreneurship, public speaking, project management up to EUR 3M,
 \section*{Experience}
 \entry{Co-founder, CEO, and Head of AI}{2018--current}{xtream}{Milan, Italy}
 \begin{itemize}
-  \item Bootstrapped xtream with four partners, growing it to EUR 2M+ annual revenue and EUR 500K profits within 7 years; acquired by TeamSystem in 2025.
+  \item Bootstrapped xtream with four partners, growing it to \metric{EUR 2M+ annual revenue} and \metric{EUR 500K profits} within 7 years; acquired by TeamSystem in 2025.
   \item Built and led a 9-person AI team, recruiting 3 PhDs and 2 university professors across Italy and Argentina.
-  \item Launched the GenAI Adoption business line, generating EUR 250K in additional revenue in 15 months with a 60\% profit margin.
-  \item Led enterprise ML and GenAI projects including financial index forecasting, power load forecasting with 25\% lower MAPE than the previous system, and AskHR, a RAG solution that reduced HR tickets by 30\% in two months.
+  \item Launched the GenAI Adoption business line, generating \metric{EUR 250K} in additional revenue in 15 months with a \metric{60\% profit margin}.
+  \item Led enterprise ML and GenAI projects including financial index forecasting, power load forecasting with \metric{25\% lower MAPE} than the previous system, and AskHR, a RAG solution that reduced HR tickets by \metric{30\%} in two months.
 \end{itemize}
 
 \entry{Co-founder, CEO}{2024--2025}{Reaidy}{Milan, Italy}
 \begin{itemize}
   \item Co-founded and led early development of an enterprise copywriting platform, from pretotyping and demos to first clients.
-  \item Generated EUR 230K revenue in the first year; acquired by TeamSystem in 2025.
+  \item Generated \metric{EUR 230K revenue} in the first year; acquired by TeamSystem in 2025.
 \end{itemize}
 
 \entry{Data Scientist}{2015--2017}{Techedge and Statwolf}{Italy, Spain, Ireland}
@@ -77,9 +82,12 @@ Developed natural gas demand forecasting models adopted by A2A; introduced a Bay
 \textbf{BSc in Computer Engineering}, University of Pavia \hfill 2012--2015, cum laude
 
 \section*{Public Resources}
-\href{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}{Google Scholar} \quad
-\href{https://sessionize.com/emanuele-fabbiani/}{Sessionize} \quad
-\href{https://github.com/donlelef}{GitHub} \quad
-\href{https://medium.com/@donlelef}{Medium}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{2.5cm}X}
+Research & \url{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}\\
+Talks & \url{https://youtube.com/playlist?list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG}\\
+Articles & \url{https://medium.com/@donlelef}\\
+Code & \url{https://github.com/donlelef}\\
+Public speaking & \url{https://sessionize.com/emanuele-fabbiani/}
+\end{tabularx}
 
 \end{document}
