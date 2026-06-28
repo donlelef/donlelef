@@ -1,93 +1,121 @@
-\documentclass[10pt,a4paper]{article}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt,a4paper]{awesome-cv}
 
-\usepackage[margin=1.15cm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{xcolor}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
-\usepackage{array}
-\usepackage{tabularx}
+\geometry{left=1.15cm, top=0.75cm, right=1.15cm, bottom=0.9cm, footskip=.35cm}
 
-\definecolor{accent}{HTML}{1AEAC8}
-\definecolor{textgray}{HTML}{4B5563}
-\definecolor{softaccent}{HTML}{E8FFFB}
+\definecolor{tiel}{HTML}{1AEAC8}
+\definecolor{softtiel}{HTML}{E8FFFB}
+\definecolor{cvdarktext}{HTML}{222222}
+\definecolor{cvtext}{HTML}{333333}
+\definecolor{cvgraytext}{HTML}{555555}
+\definecolor{cvlighttext}{HTML}{666666}
+\colorlet{awesome}{tiel}
+\colorlet{sectiondivider}{tiel}
+\colorlet{darktext}{cvdarktext}
+\colorlet{text}{cvtext}
+\colorlet{graytext}{cvgraytext}
+\colorlet{lighttext}{cvlighttext}
 
-\pagestyle{empty}
-\renewcommand{\baselinestretch}{0.94}
-\setlength{\tabcolsep}{3pt}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\setlist[itemize]{leftmargin=1.05em, topsep=0pt, itemsep=0pt, parsep=0pt}
-\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[{\color{accent}\titlerule[1pt]}]
-\titlespacing*{\section}{0pt}{5pt}{2pt}
-\newcommand{\entry}[4]{%
-  \textbf{#1} \hfill #2\\
-  {\color{textgray}#3 \hfill #4}\par
-}
-\newcommand{\metric}[1]{\colorbox{softaccent}{\strut\textbf{#1}}}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad{\color{tiel}\textbar}\quad}
+\renewcommand{\acvHeaderAfterSocialSkip}{3mm}
+\renewcommand{\acvSectionTopSkip}{2mm}
+\renewcommand{\acvSectionContentTopSkip}{1.4mm}
+
+\newcommand{\metric}[1]{\colorbox{softtiel}{\strut\textbf{#1}}}
+\newcommand{\resource}[2]{\textbf{#1}: \url{#2}}
+
+\name{Emanuele}{Fabbiani}
+\position{Researcher{\enskip\cdotp\enskip}Entrepreneur{\enskip\cdotp\enskip}Engineer}
+\email{emanuele.fabbiani@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/emanuelefabbiani}{https://www.linkedin.com/in/emanuelefabbiani}}
 
 \begin{document}
+\makecvheader[C]
 
-{\LARGE\bfseries Emanuele Fabbiani}\\[1pt]
-{\normalsize Researcher, Entrepreneur, Engineer}\\[3pt]
-\href{mailto:emanuele.fabbiani@gmail.com}{emanuele.fabbiani@gmail.com} \quad
-\href{https://www.linkedin.com/in/emanuelefabbiani}{https://www.linkedin.com/in/emanuelefabbiani}
-
-\vspace{3pt}
-{\color{accent}\rule{\textwidth}{2pt}}
-
-\section*{Profile}
+\cvsection{Profile}
+\begin{cvparagraph}
 Entrepreneur, AI engineer, and applied machine learning researcher. Co-founded and led AI/product companies acquired by TeamSystem in 2025. Built and managed technical teams, delivered production ML and GenAI systems for enterprise clients, and teach Practical AI at the Catholic University of Milan.
+\end{cvparagraph}
 
-\section*{Core Skills}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{2.3cm}X}
-AI and ML & Time series forecasting, tabular ML, deep learning, GenAI architecture, RAG, ML system design.\\
-Engineering & Python, pandas, polars, scikit-learn, XGBoost, PyTorch, LangChain, OpenAI, Qdrant, Google Cloud Platform, Azure Databricks.\\
-Leadership & Entrepreneurship, public speaking, project management up to EUR 3M, team building, teaching.
-\end{tabularx}
+\cvsection{Core Skills}
+\begin{cvskills}
+  \cvskill{AI and ML}{Time series forecasting, tabular ML, deep learning, GenAI architecture, RAG, ML system design.}
+  \cvskill{Engineering}{Python, pandas, polars, scikit-learn, XGBoost, PyTorch, LangChain, OpenAI, Qdrant, Google Cloud Platform, Azure Databricks.}
+  \cvskill{Leadership}{Entrepreneurship, public speaking, project management up to EUR 3M, team building, teaching.}
+\end{cvskills}
 
-\section*{Experience}
-\entry{Co-founder, CEO, and Head of AI}{2018--current}{xtream}{Milan, Italy}
-\begin{itemize}
-  \item Bootstrapped xtream with four partners, growing it to \metric{EUR 2M+ annual revenue} and \metric{EUR 500K profits} within 7 years; acquired by TeamSystem in 2025.
-  \item Built and led a 9-person AI team, recruiting 3 PhDs and 2 university professors across Italy and Argentina.
-  \item Launched the GenAI Adoption business line, generating \metric{EUR 250K} in additional revenue in 15 months with a \metric{60\% profit margin}.
-  \item Led enterprise ML and GenAI projects including financial index forecasting, power load forecasting with \metric{25\% lower MAPE} than the previous system, and AskHR, a RAG solution that reduced HR tickets by \metric{30\%} in two months.
-\end{itemize}
+\cvsection{Experience}
+\begin{cventries}
+  \cventry
+    {xtream}
+    {Co-founder, CEO, and Head of AI}
+    {Milan, Italy}
+    {2018--current}
+    {\begin{cvitems}
+      \item Bootstrapped xtream with four partners, growing it to \metric{EUR 2M+ annual revenue} and \metric{EUR 500K profits} within 7 years; acquired by TeamSystem in 2025.
+      \item Built and led a 9-person AI team, recruiting 3 PhDs and 2 university professors across Italy and Argentina.
+      \item Launched the GenAI Adoption business line, generating \metric{EUR 250K} in additional revenue in 15 months with a \metric{60\% profit margin}.
+      \item Led enterprise ML and GenAI projects including financial index forecasting, power load forecasting with \metric{25\% lower MAPE} than the previous system, and AskHR, a RAG solution that reduced HR tickets by \metric{30\%} in two months.
+    \end{cvitems}}
 
-\entry{Co-founder, CEO}{2024--2025}{Reaidy}{Milan, Italy}
-\begin{itemize}
-  \item Co-founded and led early development of an enterprise copywriting platform, from pretotyping and demos to first clients.
-  \item Generated \metric{EUR 230K revenue} in the first year; acquired by TeamSystem in 2025.
-\end{itemize}
+  \cventry
+    {Reaidy}
+    {Co-founder, CEO}
+    {Milan, Italy}
+    {2024--2025}
+    {\begin{cvitems}
+      \item Co-founded and led early development of an enterprise copywriting platform, from pretotyping and demos to first clients.
+      \item Generated \metric{EUR 230K revenue} in the first year; acquired by TeamSystem in 2025.
+    \end{cvitems}}
 
-\entry{Data Scientist}{2015--2017}{Techedge and Statwolf}{Italy, Spain, Ireland}
-\begin{itemize}
-  \item Delivered data science projects while completing MSc studies, including semiconductor process analysis that led to follow-up contracts and customer team growth from 2 to 8 people.
-\end{itemize}
+  \cventry
+    {Techedge and Statwolf}
+    {Data Scientist}
+    {Italy, Spain, Ireland}
+    {2015--2017}
+    {Delivered data science projects while completing MSc studies, including semiconductor process analysis that led to follow-up contracts and customer team growth from 2 to 8 people.}
+\end{cventries}
 
-\section*{Teaching and Public Work}
+\cvsection{Teaching and Public Work}
+\begin{cvparagraph}
 \textbf{Catholic University of Milan}: Professor of ``Practical AI'' in the MSc in Management \& Innovation since 2025, with 8.4/9 student satisfaction; academic board member for Economics and Statistics master's degrees since 2024.\\
 \textbf{University of Pavia}: Designed and taught 5 sold-out Python courses with 100\% positive or very positive feedback; held Machine Learning in the Master's in Statistical Genomics.\\
 \textbf{Speaking}: Delivered 50+ talks at conferences including PyData, Swiss Python Summit, Codemotion, WeAreDevelopers, AMLD Lausanne, ODSC London, PyCon Italy, and PyCon Germany.
+\end{cvparagraph}
 
-\section*{Education}
-\textbf{PhD in Applied Machine Learning}, University of Pavia and EPFL \hfill 2018--2021\\
-Developed natural gas demand forecasting models adopted by A2A; introduced a Bayesian approach to power grid identification; published 9 peer-reviewed papers with 156 citations.\\
-\textbf{MSc in Embedded and Control Systems}, University of Pavia \hfill 2015--2017, cum laude\\
-\textbf{BSc in Computer Engineering}, University of Pavia \hfill 2012--2015, cum laude
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {University of Pavia and EPFL}
+    {PhD in Applied Machine Learning}
+    {}
+    {2018--2021}
+    {Developed natural gas demand forecasting models adopted by A2A; introduced a Bayesian approach to power grid identification; published 9 peer-reviewed papers with 156 citations.}
 
-\section*{Public Resources}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{2.5cm}X}
-Research & \url{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}\\
-Talks & \url{https://youtube.com/playlist?list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG}\\
-Articles & \url{https://medium.com/@donlelef}\\
-Code & \url{https://github.com/donlelef}\\
-Public speaking & \url{https://sessionize.com/emanuele-fabbiani/}
-\end{tabularx}
+  \cventry
+    {University of Pavia, cum laude}
+    {MSc in Embedded and Control Systems}
+    {}
+    {2015--2017}
+    {}
+
+  \cventry
+    {University of Pavia, cum laude}
+    {BSc in Computer Engineering}
+    {}
+    {2012--2015}
+    {}
+\end{cventries}
+
+\cvsection{Public Resources}
+\begin{cvparagraph}
+\resource{Research}{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}\\
+\resource{Talks}{https://youtube.com/playlist?list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG}\\
+\resource{Articles}{https://medium.com/@donlelef}\\
+\resource{Code}{https://github.com/donlelef}\\
+\resource{Public speaking}{https://sessionize.com/emanuele-fabbiani/}
+\end{cvparagraph}
 
 \end{document}
