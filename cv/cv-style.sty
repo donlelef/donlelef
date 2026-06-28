@@ -6,8 +6,29 @@
   \RequirePackage{cmap}
   \RequirePackage[T1]{fontenc}
   \RequirePackage[utf8]{inputenc}
+  \RequirePackage[scaled=0.95]{helvet}
+\else
+  \RequirePackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setsansfont{Sen.ttf}[
+    Path=fonts/,
+    BoldFont=Sen.ttf,
+    BoldFeatures={FakeBold=2},
+    ItalicFont=Sen.ttf,
+    ItalicFeatures={FakeSlant=0.18},
+    BoldItalicFont=Sen.ttf,
+    BoldItalicFeatures={FakeBold=2,FakeSlant=0.18}
+  ]
+  \setmainfont{Sen.ttf}[
+    Path=fonts/,
+    BoldFont=Sen.ttf,
+    BoldFeatures={FakeBold=2},
+    ItalicFont=Sen.ttf,
+    ItalicFeatures={FakeSlant=0.18},
+    BoldItalicFont=Sen.ttf,
+    BoldItalicFeatures={FakeBold=2,FakeSlant=0.18}
+  ]
 \fi
-\RequirePackage[scaled=0.95]{helvet}
 \RequirePackage[a4paper,left=1.25cm,top=1cm,right=1.25cm,bottom=1.15cm,footskip=.4cm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
