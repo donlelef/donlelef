@@ -1,30 +1,9 @@
-%!TEX TS-program = xelatex
+%!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[10pt,a4paper]{awesome-cv}
+\documentclass[10pt,a4paper]{article}
 
+\usepackage{cv-style}
 \geometry{left=1.15cm, top=0.75cm, right=1.15cm, bottom=0.9cm, footskip=.35cm}
-
-\definecolor{tiel}{HTML}{1AEAC8}
-\definecolor{softtiel}{HTML}{E8FFFB}
-\definecolor{cvdarktext}{HTML}{222222}
-\definecolor{cvtext}{HTML}{333333}
-\definecolor{cvgraytext}{HTML}{555555}
-\definecolor{cvlighttext}{HTML}{666666}
-\colorlet{awesome}{tiel}
-\colorlet{sectiondivider}{tiel}
-\colorlet{darktext}{cvdarktext}
-\colorlet{text}{cvtext}
-\colorlet{graytext}{cvgraytext}
-\colorlet{lighttext}{cvlighttext}
-
-\setbool{acvSectionColorHighlight}{true}
-\renewcommand{\acvHeaderSocialSep}{\quad{\color{tiel}\textbar}\quad}
-\renewcommand{\acvHeaderAfterSocialSkip}{3mm}
-\renewcommand{\acvSectionTopSkip}{2mm}
-\renewcommand{\acvSectionContentTopSkip}{1.4mm}
-
-\newcommand{\metric}[1]{\colorbox{softtiel}{\strut\textbf{#1}}}
-\newcommand{\resource}[2]{\textbf{#1}: \url{#2}}
 
 \name{Emanuele}{Fabbiani}
 \position{Researcher{\enskip\cdotp\enskip}Entrepreneur{\enskip\cdotp\enskip}Engineer}
