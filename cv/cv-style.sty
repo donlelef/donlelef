@@ -38,6 +38,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{tabularx}
 \RequirePackage{array}
+\RequirePackage{fontawesome5}
 
 \definecolor{cvaccent}{HTML}{0F766E}
 \definecolor{cvtext}{HTML}{202124}
@@ -99,20 +100,32 @@
 \newcommand{\extrainfo}[1]{\renewcommand{\cvextra}{#1}}
 \newcommand{\cvsep}{\textcolor{cvlight}{\enspace\textbar\enspace}}
 \newcommand{\positionsep}{\textcolor{cvaccent}{\enspace\textbullet\enspace}}
+\newcommand{\ifcvhascontact}[2]{%
+  \ifdefempty{\cvemail}
+    {\ifdefempty{\cvextra}{#2}{#1}}
+    {#1}%
+}
+\newcommand{\cvcontactline}{%
+  \ifdefempty{\cvemail}
+    {\ifdefempty{\cvextra}{}{\cvextra\par}}
+    {%
+      \ifdefempty{\cvextra}
+        {\href{mailto:\cvemail}{\cvemail}\par}
+        {\href{mailto:\cvemail}{\cvemail}\cvsep\cvextra\par}%
+    }%
+}
 
 \newcommand{\makecvheader}[1][]{%
   {\raggedright
     \ifcvcompact
       {\fontsize{22pt}{25pt}\selectfont\bfseries \cvfirstname\ \cvlastname}\par
       {\small\color{cvmuted}\cvposition}\par
-      \vspace{3pt}
-      {\scriptsize \href{mailto:\cvemail}{\cvemail}\cvsep\cvextra}\par
+      \ifcvhascontact{\vspace{3pt}{\scriptsize\cvcontactline}}{}
     \else
       {\fontsize{25pt}{29pt}\selectfont\bfseries \cvfirstname\ \cvlastname}\par
       \vspace{1pt}
       {\normalsize\color{cvmuted}\cvposition}\par
-      \vspace{5pt}
-      {\footnotesize \href{mailto:\cvemail}{\cvemail}\cvsep\cvextra}\par
+      \ifcvhascontact{\vspace{5pt}{\footnotesize\cvcontactline}}{}
     \fi
   }
   \ifcvcompact\vspace{5pt}\else\vspace{8pt}\fi
@@ -137,6 +150,15 @@
 
 \newcommand{\metric}[1]{%
   \textbf{#1}%
+}
+
+\newcommand{\iconlink}[3]{%
+  \textcolor{cvaccent}{\makebox[1.15em][c]{\faIcon{#1}}}%
+  \enspace\textbf{#2}\cvsep\href{#3}{\nolinkurl{#3}}%
+}
+\newcommand{\iconcontact}[4]{%
+  \textcolor{cvaccent}{\makebox[1.15em][c]{\faIcon{#1}}}%
+  \enspace\textbf{#2}\cvsep\href{#3}{\nolinkurl{#4}}%
 }
 
 \newcommand{\resource}[2]{\textbf{#1}\cvsep\href{#2}{\nolinkurl{#2}}}
