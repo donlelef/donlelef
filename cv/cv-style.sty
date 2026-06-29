@@ -136,20 +136,36 @@
 
 \newcommand{\cvsection}[1]{%
   \ifcvcompact\Needspace{3\baselineskip}\else\Needspace{4\baselineskip}\fi
-  \ifcvcompact\vspace{5pt}\else\vspace{8pt}\fi
-  {\normalsize\bfseries\MakeUppercase{#1}}\par
-  \vspace{1pt}
-  {\color{cvlight}\rule{\linewidth}{0.45pt}}\par
-  \ifcvcompact\vspace{0pt}\else\vspace{2pt}\fi
+  \ifcvcompact
+    \vspace{7pt}
+    {\normalsize\bfseries\MakeUppercase{#1}}\par
+    \vspace{-0.5pt}
+  \else
+    \vspace{8pt}
+    {\normalsize\bfseries\MakeUppercase{#1}}\par
+    \vspace{1pt}
+    {\color{cvlight}\rule{\linewidth}{0.45pt}}\par
+    \vspace{2pt}
+  \fi
 }
 
 \newenvironment{cvparagraph}{\begingroup\color{cvtext}\ifcvcompact\footnotesize\else\small\fi}{\par\endgroup}
 \newenvironment{cventries}{}{}
 \newenvironment{cvskills}{}{}
 \newenvironment{cvitems}{\begin{itemize}}{\end{itemize}}
+\newenvironment{cvsectionitems}{%
+  \begingroup\color{cvtext}\ifcvcompact\footnotesize\else\small\fi
+  \begin{itemize}[
+    leftmargin=1.05em,
+    itemsep=1.8pt,
+    topsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]%
+}{\end{itemize}\endgroup}
 
 \newcommand{\metric}[1]{%
-  \textbf{#1}%
+  \textcolor{cvaccent}{\bfseries #1}%
 }
 
 \newcommand{\iconlink}[3]{%
