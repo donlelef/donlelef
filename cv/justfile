@@ -1,0 +1,12 @@
+source := "short/emanuele_fabbiani_cv.tex"
+name := "emanuele_fabbiani_cv"
+build_dir := "../tmp/latex"
+output_dir := "output"
+
+default: build
+
+build:
+    mkdir -p "{{build_dir}}" "{{output_dir}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}" "{{source}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}" "{{source}}"
+    cp "{{build_dir}}/{{name}}.pdf" "{{output_dir}}/{{name}}.pdf"

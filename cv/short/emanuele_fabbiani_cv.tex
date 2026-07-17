@@ -1,0 +1,172 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,a4paper]{awesome-cv}
+
+\geometry{left=1.35cm,top=0.75cm,right=1.35cm,bottom=0.95cm,footskip=4pt}
+\colorlet{awesome}{awesome-skyblue}
+\definecolor{darktext}{HTML}{252A31}
+\definecolor{text}{HTML}{343A40}
+\definecolor{graytext}{HTML}{5B6470}
+\definecolor{lighttext}{HTML}{7B8490}
+\definecolor{sectiondivider}{HTML}{CBD2D9}
+\setbool{acvSectionColorHighlight}{true}
+
+% Compact, readable one-page typesetting built on Awesome-CV's structure.
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{29pt}{1em}\headerfontlight\color{graytext} #1}}
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{29pt}{1em}\headerfont\bfseries\color{darktext} #1}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\fontsize{8.4pt}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\sectionstyleface}[1]{{\fontsize{14.5pt}{1em}\bodyfont\bfseries #1}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{8.4pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{9.05pt}{10.5pt}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{9.1pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+\renewcommand{\acvHeaderAfterNameSkip}{0.1mm}
+\renewcommand{\acvHeaderAfterPositionSkip}{0.2mm}
+\renewcommand{\acvHeaderAfterSocialSkip}{1.5mm}
+\renewcommand{\acvSectionTopSkip}{2.5mm}
+\renewcommand{\acvSectionContentTopSkip}{1.8mm}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\renewenvironment{cvitems}{%
+  \vspace{-3.2mm}
+  \begin{itemize}[leftmargin=2ex,nosep,noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+    \RaggedRight
+}{%
+  \end{itemize}
+  \vspace{1.5mm}
+}
+
+\hypersetup{
+  pdftitle={Emanuele Fabbiani - Curriculum Vitae},
+  pdfauthor={Emanuele Fabbiani},
+  pdfsubject={Curriculum Vitae},
+  colorlinks=false
+}
+
+\name{Emanuele}{Fabbiani}
+\position{Engineer{\enskip\cdotp\enskip}Researcher{\enskip\cdotp\enskip}Entrepreneur}
+\email{emanuele.fabbiani@gmail.com}
+
+\begin{document}
+
+\makecvheader[C]
+
+\cvsection{Experience}
+
+\begin{cventries}
+  \cventry
+    {Co-founder, CEO, and Head of AI}
+    {xtream}
+    {Milan, Italy}
+    {2018--current}
+    {
+      \begin{cvitems}
+        \item {Co-founded and bootstrapped the company to \textbf{EUR 2M+ annual revenue} and \textbf{EUR 500K profit}; served as CEO until its 2025 acquisition by TeamSystem.}
+        \item {Built and led a \textbf{9-person AI team} across Italy and Argentina, hiring three PhD-level researchers.}
+        \item {Launched the GenAI Adoption business line, generating \textbf{EUR 250K additional revenue in 15 months} at a \textbf{70\% profit margin}.}
+        \item {Led 15+ enterprise ML and GenAI projects, including Lavazza financial-index forecasting for investment decisions (5-person team; models outperformed the market), Plenitude power-load forecasting for energy operations (4-person team; \textbf{25\% lower MAPE}), and a Nexi HR-policy assistant (4-person team; \textbf{30\% fewer HR tickets} in two months).}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Co-founder and CEO}
+    {Reaidy}
+    {Milan, Italy}
+    {2024--2025}
+    {
+      \begin{cvitems}
+        \item {Co-founded and led early development of a GenAI-powered content creation platform, from validation prototypes and enterprise demos to first clients.}
+        \item {Generated \textbf{EUR 150K first-year revenue} from enterprise customers; Reaidy was acquired by TeamSystem in 2025.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Data Scientist}
+    {Techedge}
+    {Milan, Italy and Madrid, Spain}
+    {2015--2017}
+    {
+      \begin{cvitems}
+        \item {Worked part-time while completing MSc studies. Grew the team allocated to Eni, Italy's largest energy company, from 2 to 8 people while contract revenue grew \textbf{5x}.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Data Scientist}
+    {Statwolf}
+    {Dublin, Ireland and Pavia, Italy}
+    {2015--2017}
+    {
+      \begin{cvitems}
+        \item {Started as a summer intern, then collaborated remotely on semiconductor process analysis that led to follow-up contracts.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Teaching and Public Work}
+
+\begin{cventries}
+  \cventry
+    {}
+    {}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {\textbf{Catholic University of Milan:} Professor of ``Practical AI'' in the MSc in Management \& Innovation since 2025 (\textbf{8.4/9 student satisfaction}); academic board member for Economics and Statistics master's degrees since 2024.}
+        \item {\textbf{University of Pavia:} Designed and taught five sold-out Python courses with \textbf{100\% positive or very positive feedback}; taught Machine Learning in the Master's in Statistical Genomics.}
+        \item {\textbf{Speaking:} Delivered \textbf{50+ talks} at PyData, Swiss Python Summit, Codemotion, WeAreDevelopers, AMLD Lausanne, ODSC London, PyCon Italy, and PyCon Germany.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Education}
+
+\begin{cventries}
+  \cventry
+    {PhD in Applied Machine Learning}
+    {University of Pavia and EPFL}
+    {}
+    {2018--2021}
+    {
+      \begin{cvitems}
+        \item {Developed natural gas demand forecasting models adopted by A2A; introduced a Bayesian approach to power grid identification; published \textbf{9 peer-reviewed papers with 175+ citations}.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {BSc in Computer Engineering; MSc in Embedded and Control Systems}
+    {University of Pavia}
+    {}
+    {2012--2017}
+    {
+      \begin{cvitems}
+        \item {Final grade: \textbf{110/110 cum laude in both degrees}; averages of 30/30 (BSc) and 29.7/30 (MSc), both in the faculty's \textbf{top 1\%}.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Public Resources}
+
+\begin{cvskills}
+  \cvskill{Profiles}{
+    \href{https://www.linkedin.com/in/emanuelefabbiani}{LinkedIn}
+    \enskip\textbullet\enskip
+    \href{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}{Research}
+    \enskip\textbullet\enskip
+    \href{https://github.com/donlelef}{Code}
+    \enskip\textbullet\enskip
+    \href{https://sessionize.com/emanuele-fabbiani/}{Public speaking}
+    \enskip\textbullet\enskip
+    \href{https://youtube.com/playlist?list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG}{Talks}
+  }
+\end{cvskills}
+
+\end{document}

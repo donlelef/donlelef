@@ -7,7 +7,9 @@ Here on GitHub, I build AI systems and products to solve real-world needs.
 ## 🚀 Entrepreneurial Journey
 I founded [xtream](https://xtreamers.io) and [Reaidy](https://reaidy.ai), both acquired by [TeamSystem](https://teamsystem.com) in September 2025.
 
-I was an angel investor in [Pillar](https://www.pillar.it/) and am a pre-seed investor in [GoMutuo](https://www.gomutuo.it/).
+I was an angel investor in [Pillar](https://www.pillar.it/), achieving a 3.3× return in nine months, and I'm a pre-seed investor in [GoMutuo](https://www.gomutuo.it/).
+
+I'm partner and CTO at [PFA](https://pfaitalia.com), a company that provides wellbeing and psychological services to businesses and public organizations.
 
 ## 🎓 Academic Background
 An engineer by training, I fell in love with AI and Machine Learning during my PhD between the University of Pavia and EPFL.

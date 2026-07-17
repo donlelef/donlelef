@@ -10,3 +10,6 @@
 *.synctex.gz
 *.toc
 *.xdv
+
+# Local CV build and render intermediates
+/tmp/
