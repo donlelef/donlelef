@@ -1,0 +1,412 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,a4paper]{awesome-cv}
+
+\geometry{left=1.60cm,top=1.10cm,right=1.60cm,bottom=1.25cm,footskip=14pt}
+\colorlet{awesome}{awesome-skyblue}
+\definecolor{darktext}{HTML}{252A31}
+\definecolor{text}{HTML}{343A40}
+\definecolor{graytext}{HTML}{5B6470}
+\definecolor{lighttext}{HTML}{7B8490}
+\definecolor{sectiondivider}{HTML}{CBD2D9}
+\setbool{acvSectionColorHighlight}{true}
+
+% Match the short CV's typography, spacing, and visual hierarchy.
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{31pt}{1em}\headerfontlight\color{graytext} #1}}
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{31pt}{1em}\headerfont\bfseries\color{darktext} #1}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\sectionstyleface}[1]{{\fontsize{15.5pt}{1em}\bodyfont\bfseries #1}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{8.9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{9.6pt}{11.3pt}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{9.6pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\color{text} #1}}
+\renewcommand{\acvHeaderAfterNameSkip}{1.2mm}
+\renewcommand{\acvHeaderAfterPositionSkip}{0.2mm}
+\renewcommand{\acvHeaderAfterSocialSkip}{2.5mm}
+\renewcommand{\acvSectionTopSkip}{3.5mm}
+\renewcommand{\acvSectionContentTopSkip}{2.2mm}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\renewenvironment{cvitems}{%
+  \vspace{-3.2mm}
+  \begin{itemize}[leftmargin=2ex,nosep,noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+    \RaggedRight
+}{%
+  \end{itemize}
+  \vspace{2mm}
+}
+
+\hypersetup{
+  pdftitle={Emanuele Fabbiani - Long Curriculum Vitae},
+  pdfauthor={Emanuele Fabbiani},
+  pdfsubject={Curriculum Vitae},
+  colorlinks=false
+}
+
+\name{Emanuele}{Fabbiani}
+\position{Engineer{\enskip\cdotp\enskip}Researcher{\enskip\cdotp\enskip}Founder}
+\email{emanuele.fabbiani@gmail.com}
+\linkedin{emanuelefabbiani}
+\github{donlelef}
+
+\begin{document}
+
+\makecvfooter{Emanuele Fabbiani}{}{\thepage}
+\makecvheader[C]
+
+\cvsection{Professional Profile}
+
+\begin{cvparagraph}
+AI engineer, researcher, and founder who bootstrapped xtream to \textbf{25 employees}, \textbf{EUR 2M+ in annual revenue}, and \textbf{EUR 500K in profit}; built a \textbf{9-person AI team}; and directed \textbf{15+ enterprise AI projects}. Published \textbf{9 peer-reviewed papers with 175+ citations} and delivered \textbf{50+ talks}, combining production ML with company building, enterprise delivery, research, and teaching.
+\end{cvparagraph}
+
+\cvsection{Skills}
+
+\begin{cvskills}
+  \cvskill{AI/ML}{Machine learning, deep learning, time-series forecasting, GenAI System Design, ML system design}
+  \cvskill{Technologies}{Python, PyTorch, scikit-learn, XGBoost, SHAP, Polars, Prefect, Streamlit, GCP, Azure, Databricks}
+  \cvskill{Leadership}{Entrepreneurship, AI strategy, enterprise delivery, team management, product management, teaching}
+\end{cvskills}
+
+\cvsection{Experience}
+
+\begin{cventries}
+  \cventry
+    {Co-founder, CEO, and Head of AI}
+    {xtream}
+    {Milan, Italy}
+    {2018--Present}
+    {
+      \begin{cvitems}
+        \item {Co-founded and bootstrapped the company to \textbf{25 employees}, \textbf{EUR 2M+ in annual revenue}, and \textbf{EUR 500K in profit}.}
+        \item {Appointed CEO in 2023, doubled revenue in two years, and led the company through its 2025 acquisition by TeamSystem.}
+        \item {Built and led a \textbf{9-person AI team} across Italy and Argentina, recruiting three PhDs and two university professors.}
+        \item {Launched the GenAI Adoption practice, generating \textbf{EUR 250K in revenue within 15 months} at a \textbf{75\% profit margin}.}
+        \item {Directed 15+ enterprise AI projects from presales and team formation through deployment, executive communication, and operational adoption.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Machine learning, time-series forecasting, Python, XGBoost, SHAP, Azure, Databricks}
+    {Financial index forecasting}
+    {}
+    {}
+    {Led five data scientists in designing models to forecast financial indexes from macroeconomic variables, using scikit-learn, XGBoost, and SHAP for interpretability. Implemented ingestion, preprocessing, training, and prediction on Azure Databricks; selected models outperformed the market and \textbf{supported investment decisions}.\vspace{4mm}}
+
+  \cventry
+    {Machine learning, time-series forecasting, Python, scikit-learn}
+    {Power load forecasting}
+    {}
+    {}
+    {Led four data scientists and data engineers from presales to deployment of power load forecasting models for Plenitude. Delivered an average MAPE \textbf{25\% lower} than the previous production system, contributing to \textbf{EUR 3M+ lower imbalance penalties}.\vspace{4mm}}
+
+  \cventry
+    {GenAI, RAG, OpenAI, Python, Qdrant, FastAPI}
+    {AskHR}
+    {}
+    {}
+    {Led four engineers from presales through deployment of a GenAI-powered assistant for Nexi's HR policies. Oversaw the retrieval system and performance evaluation methodology. The solution was adopted by all Italian employees and reduced HR ticket volume by \textbf{30\% within two months}.\vspace{4mm}}
+
+  \cventry
+    {Machine learning, time-series forecasting, XGBoost, SHAP, Prefect, Streamlit, GCP Cloud Run}
+    {Sales forecasting}
+    {}
+    {}
+    {Led a \textbf{4-person team} on the Lavazza sales-forecasting project, building XGBoost models with SHAP interpretability that outperformed the prior tools in \textbf{5 out of 5 countries}. Worked with the team to deliver the training pipeline in Prefect and a Streamlit interaction layer deployed on GCP Cloud Run.\vspace{4mm}}
+
+  \cventry
+    {Credit rating, classification, survival analysis, XGBoost, SHAP}
+    {Credit rating model}
+    {}
+    {}
+    {Led four data scientists, two analysts, and subject-matter experts in building an XGBoost credit rating model, reporting directly to the CEO of CF+ Bank. Oversaw model calibration using a variant of Platt scaling and the development of an experimental survival-analysis variant. The final model used XGBoost and SHAP for interpretability and was deployed in a Kubernetes pod with a FastAPI service. In backtesting, it delivered \textbf{35\% lower non-performing exposure} than the existing model, \textbf{equivalent to EUR 5M}, and reached production \textbf{two months ahead of schedule}.\vspace{4mm}}
+\end{cventries}
+
+\newpage
+\vspace*{4mm}
+
+\begin{cventries}
+  \cventry
+    {Co-founder and CEO}
+    {Reaidy}
+    {Milan, Italy}
+    {2024--2025}
+    {
+      \begin{cvitems}
+        \item {Co-founded a GenAI content platform as an xtream spinoff and led product validation, prototyping, initial demos, and enterprise delivery.}
+        \item {Secured the first clients and generated \textbf{EUR 150K in first-year revenue} before the company's 2025 acquisition by TeamSystem.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Data Scientist}
+    {Avvale}
+    {Milan, Italy and Madrid, Spain}
+    {2015--2017}
+    {
+      \begin{cvitems}
+        \item {Delivered data science projects part-time while completing an MSc; expanded the Eni account team from 2 to 8 as contract revenue grew \textbf{5x}.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Data Scientist}
+    {Statwolf}
+    {Dublin, Ireland and Pavia, Italy}
+    {2015--2017}
+    {
+      \begin{cvitems}
+        \item {Started as a summer intern in Dublin and continued as a part-time remote contributor. Analyzed the effect of weather on semiconductor manufacturing; the findings earned client recognition and \textbf{follow-up contracts}.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Teaching and Academic Service}
+
+\begin{cventries}
+  \cventry
+    {Professor of Practical AI, MSc in Management \& Innovation}
+    {Catholic University of Milan}
+    {Milan, Italy}
+    {2025--Present}
+    {
+      \begin{cvitems}
+        \item {Teaches the Practical AI course; received \textbf{7.4/9 student satisfaction} in the first year and \textbf{8.4/9} in the second year.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Academic board member}
+    {Catholic University of Milan}
+    {Milan, Italy}
+    {2024--Present}
+    {
+      \begin{cvitems}
+        \item {Serves on the academic board for the Economics and Statistics master's programs.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Lecturer and course designer}
+    {University of Pavia}
+    {Pavia, Italy}
+    {}
+    {
+      \begin{cvitems}
+        \item {Proposed, designed, and taught three editions of Python for Data Science and two of Python for Data Analytics; all five sold out and received \textbf{100\% positive or very positive feedback}.}
+        \item {Taught Machine Learning in the MSc in Statistical Genomics.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Guest lecturer}
+    {European universities and colleges}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Lectured at the Polytechnic University of Milan, Polytechnic University of Wroclaw, EPFL, HSLU, and Almo Collegio Borromeo.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Education}
+
+\begin{cventries}
+  \cventry
+    {PhD in Applied Machine Learning}
+    {University of Pavia and EPFL}
+    {Italy and Switzerland}
+    {2018--2021}
+    {
+      \begin{cvitems}
+        \item {Built natural gas forecasting models adopted by A2A and introduced a Bayesian power-grid identification method later extended by ETH and UC Berkeley researchers.}
+        \item {Published \textbf{9 peer-reviewed papers with 175+ citations} while building xtream.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {MSc in Embedded and Control Systems}
+    {University of Pavia}
+    {Pavia, Italy}
+    {2015--2017}
+    {
+      \begin{cvitems}
+        \item {Graduated \textbf{110/110 cum laude}; ranked in the faculty's \textbf{top 1\%}.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {BSc in Computer Engineering}
+    {University of Pavia}
+    {Pavia, Italy}
+    {2012--2015}
+    {
+      \begin{cvitems}
+        \item {Graduated \textbf{110/110 cum laude}; ranked in the faculty's \textbf{top 1\%}.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\newpage
+\vspace*{4mm}
+
+\cvsection{Entrepreneurship and Investing}
+
+\begin{cventries}
+  \cventry
+    {Partner and CTO}
+    {\href{https://pfaitalia.com/}{PFA}}
+    {Italy}
+    {2026--Present}
+    {
+      \begin{cvitems}
+        \item {Technology leader at a company providing wellbeing and psychological services to businesses and public organizations.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Angel investor}
+    {\href{https://www.pillar.it/}{Pillar}}
+    {Italy}
+    {2025--2026}
+    {
+      \begin{cvitems}
+        \item {Achieved a \textbf{3.3x return in nine months}.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Angel investor}
+    {\href{https://www.gomutuo.it/}{GoMutuo}}
+    {Italy}
+    {2026--Present}
+    {
+      \begin{cvitems}
+        \item {Invested in the pre-seed round.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Advisor}
+    {\href{https://www.asimov.law/}{Asimov AI}}
+    {Italy}
+    {2025--Present}
+    {
+      \begin{cvitems}
+        \item {Advises an AI platform for Italian legislation with \textbf{18 enterprise customers}; the company is bootstrapped and profitable.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Public Speaking and Service}
+
+\begin{cventries}
+  \cventry
+    {Speaker and track organizer}
+    {European AI and Python community}
+    {}
+    {2022--Present}
+    {
+      \begin{cvitems}
+        \item {Delivered \textbf{50+ talks} at PyData Paris, Berlin, and Milan; PyCon Italy and Germany; AMLD Lausanne; ODSC London; WeAreDevelopers Berlin; Codemotion; Swiss Python Summit; and other European conferences.}
+        \item {Organized and hosted conference tracks and workshops at AMLD Lausanne since 2022.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Mentor}
+    {Lead the Future}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Selected to mentor bachelor's and master's students interested in STEM careers.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Selected Podcasts}
+
+\begin{cventries}
+  \cventry
+    {Co-host}
+    {\href{https://www.youtube.com/playlist?list=PLJrWo7UCQBWgnQYVWEH8t6-g3fhmvRmF5}{\color{darktext}\underline{\textmd{AI Compass}}}}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Hosted a podcast on applied AI and the people building it during his time at xtream.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Guest}
+    {Technology and entrepreneurship podcasts}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {\href{https://youtu.be/3Sq3XUn8LIw}{\color{darktext}\underline{A Journey Through Academia and Business}} - Data Driven People.}
+        \item {\href{https://youtu.be/Q8sw_xTJOH0}{\color{darktext}\underline{How to Build a Company Without External Funding}} - Silicon Valley Fellowship.}
+        \item {\href{https://www.youtube.com/live/EVsOkX6SyBk}{\color{darktext}\underline{Using AI to Forecast the Future}} - ProfessionAI.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Selected Talks}
+
+\begin{cventries}
+  \cventry
+    {}
+    {}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {\href{https://youtu.be/FZwOrGD3agA}{\color{darktext}\underline{ML for Energy: Why Academic Models Fail in the Real World}} - AMLD Lausanne.}
+        \item {\href{https://youtu.be/k2LDWMLZQ8k}{\color{darktext}\underline{Marketing Media Mix Models with Python \& PyMC: A Case Study}} - PyCon DE \& PyData Berlin.}
+        \item {\href{https://youtu.be/NjczVYbtfbg}{\color{darktext}\underline{Advanced Polars: Lazy Loading and Streaming Mode}} - PyData Paris.}
+        \item {\href{https://youtu.be/NHdvv3-loV4}{\color{darktext}\underline{System Design for the GenAI Era}} - AI Heroes.}
+        \item {\href{https://youtu.be/EPfMHVltAxI}{\color{darktext}\underline{Langfuse, OpenLIT, and Phoenix: Observability for the GenAI Era}} - PyCon Italy.}
+        \item {\href{https://youtu.be/hnZjw77-1rE}{\color{darktext}\underline{From SHAP to EBM: Explain Your Gradient Boosting Models in Python}} - Swiss Python Summit.}
+        \item {\href{https://youtu.be/r7a4P5ZZRsI}{\color{darktext}\underline{Inside the Mind of an LLM}} - Codemotion.}
+        \item {\href{https://youtu.be/k0fzfhRJ2UM}{\color{darktext}\underline{The Hitchhiker's Guide to Asyncio}} - PyCon Italy.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Public Resources}
+
+\begin{tcolorbox}[
+  colback=awesome!4!white,
+  colframe=sectiondivider,
+  boxrule=0.4pt,
+  arc=1.5mm,
+  left=2mm,
+  right=2mm,
+  top=1.6mm,
+  bottom=1.6mm
+]
+  \centering
+  {\fontsize{9.2pt}{1em}\bodyfont
+    \href{https://scholar.google.com/citations?user=aK8MDJIAAAAJ}{\color{awesome}\faGraduationCap\enskip\color{darktext}\underline{Research}}
+    \quad\textcolor{sectiondivider}{\textbar}\quad
+    \href{https://github.com/donlelef}{\color{awesome}\faGithub\enskip\color{darktext}\underline{Code}}
+    \quad\textcolor{sectiondivider}{\textbar}\quad
+    \href{https://sessionize.com/emanuele-fabbiani/}{\color{awesome}\faMicrophone\enskip\color{darktext}\underline{Speaking}}
+    \quad\textcolor{sectiondivider}{\textbar}\quad
+    \href{https://youtube.com/playlist?list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG}{\color{awesome}\faYoutube\enskip\color{darktext}\underline{Talks}}
+    \quad\textcolor{sectiondivider}{\textbar}\quad
+    \href{https://medium.com/@donlelef}{\color{awesome}\faPenNib\enskip\color{darktext}\underline{Articles}}
+  }
+\end{tcolorbox}
+
+\end{document}
