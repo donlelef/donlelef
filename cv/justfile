@@ -1,12 +1,22 @@
-source := "short/emanuele_fabbiani_cv.tex"
-name := "emanuele_fabbiani_cv"
+short_source := "short/emanuele_fabbiani_cv.tex"
+short_name := "emanuele_fabbiani_cv"
+long_source := "long/emanuele_fabbiani_cv_long.tex"
+long_name := "emanuele_fabbiani_cv_long"
 build_dir := "../tmp/latex"
 output_dir := "output"
 
 default: build
 
-build:
-    mkdir -p "{{build_dir}}" "{{output_dir}}"
-    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}" "{{source}}"
-    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}" "{{source}}"
-    cp "{{build_dir}}/{{name}}.pdf" "{{output_dir}}/{{name}}.pdf"
+build: short long
+
+short:
+    mkdir -p "{{build_dir}}/short" "{{output_dir}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}/short" "{{short_source}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}/short" "{{short_source}}"
+    cp "{{build_dir}}/short/{{short_name}}.pdf" "{{output_dir}}/{{short_name}}.pdf"
+
+long:
+    mkdir -p "{{build_dir}}/long" "{{output_dir}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}/long" "{{long_source}}"
+    TEXINPUTS=template: xelatex -interaction=nonstopmode -halt-on-error -output-directory="{{build_dir}}/long" "{{long_source}}"
+    cp "{{build_dir}}/long/{{long_name}}.pdf" "{{output_dir}}/{{long_name}}.pdf"
