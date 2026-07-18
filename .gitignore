@@ -1,0 +1,15 @@
+.DS_Store
+**/.DS_Store
+
+# LaTeX build intermediates
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local CV build and render intermediates
+/tmp/
