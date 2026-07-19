@@ -12,14 +12,14 @@ I was an angel investor in [Pillar](https://www.pillar.it/), achieving a 3.3× r
 I'm partner and CTO at [PFA](https://pfaitalia.com), a company that provides wellbeing and psychological services to businesses and public organizations.
 
 ## 🎓 Academic Background
-An engineer by training, I fell in love with AI and Machine Learning during my PhD between the University of Pavia and EPFL.
+An engineer by training, I fell in love with AI and Machine Learning during my PhD between the University of Pavia and EPFL. You can find [my thesis in this repo](https://github.com/donlelef/talks) and my publications on [Google Scholar](https://scholar.google.com/citations?user=aK8MDJIAAAAJ).
 
 Since then, I've had the privilege of lecturing at several leading institutions:
 - **Professor** of the **Practical AI** course at the Catholic University of Milan
 - **Guest Lecturer** at the University of Pavia, the Polytechnic of Milan, the Polytechnic of Wrocław, EPFL, and HSLU
 
 ## 🎤 Speaking & Talks
-I love sharing what I learn. Below are some of my favorite sessions. You can find the [full list of sessions on Sessionize](https://sessionize.com/emanuele-fabbiani/), and [even more videos on YouTube](https://www.youtube.com/watch?v=3Sq3XUn8LIw&list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG). Note that some of the content is in Italian.
+I love sharing what I learn. Below are some of my favorite sessions. You can find the [full list of sessions on Sessionize](https://sessionize.com/emanuele-fabbiani/), [even more videos on YouTube](https://www.youtube.com/watch?v=3Sq3XUn8LIw&list=PLbrceUOJLNLSlZfIWXZCdXzTeVw3JSurG), and a [list of talks with the related material in this repo](https://github.com/donlelef/talks). Note that some of the content is in Italian.
 
 ### 🎙️ Podcasts
 During my time at xtream, I hosted the [AI Compass podcast](https://www.youtube.com/playlist?list=PLJrWo7UCQBWgnQYVWEH8t6-g3fhmvRmF5) with Luca.
